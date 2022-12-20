@@ -42,11 +42,13 @@ public void setName(String name) {
 }
 
 public void setPrice(double price) {
+    if (price < 0) {
+        throw new IllegalArgumentException("Price cannot be less than 0");
+    } 
     this.price = price;
 }
 
 // toString
-
 public String toString() {
     return name + ": $" + price + " ";
 }

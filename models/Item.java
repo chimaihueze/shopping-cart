@@ -9,5 +9,11 @@ public Item(String name, double price) {
     this.name = name;
     this.price = price;
 }
+
+// copy constructor
+public Item(Item source) {
+    this.name = source.name;
+    this.price = source.price;
+}
   
 }

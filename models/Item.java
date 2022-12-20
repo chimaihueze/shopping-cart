@@ -35,6 +35,9 @@ public double getPrice() {
 
 // setters
 public void setName(String name) {
+    if (name.isBlank() || name == null) {
+        throw new IllegalArgumentException("Name cannot be null/blank");
+    }
     this.name = name;
 }
 

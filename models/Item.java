@@ -33,5 +33,13 @@ public void setName(String name) {
 public void setPrice(double price) {
     this.price = price;
 }
+
+// toString
+
+public String toString() {
+    return name + ": $" + price + " ";
+}
+
+
   
 }

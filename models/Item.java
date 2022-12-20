@@ -6,6 +6,14 @@ public class Item {
     
 // constructor
 public Item(String name, double price) {
+
+    if (name.isBlank() || name == null) {
+        throw new IllegalArgumentException("Name cannot be null/blank");
+    }
+    if (price < 0) {
+        throw new IllegalArgumentException("Price cannot be less than 0");
+    } 
+
     this.name = name;
     this.price = price;
 }

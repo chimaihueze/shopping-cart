@@ -4,6 +4,11 @@ import java.util.ArrayList;
 public class Cart {
     ArrayList<Item> items;
 
+
+    public Cart() {
+        this.items = new ArrayList<Item>();
+    }
+
    /**
     * Name: add
     * @param item

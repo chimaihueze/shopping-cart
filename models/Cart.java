@@ -19,7 +19,6 @@ public class Cart {
         this.items.set(index, new Item(item));
     }
 
-
     /**
     * Name: add
     * @param item
@@ -29,9 +28,14 @@ public class Cart {
     *   1. Adds an item to the cart if it wasn't already added.
     */
 
- 
- 
-  
+    public boolean add(Item item) {
+        if (this.items.contains(item)) {
+            return false;
+        }
+        this.items.add(new Item(item));
+        return true;
+    }
+
    /**
     * Name: remove
     * @param name
@@ -40,7 +44,13 @@ public class Cart {
     *   1. Removes the item that matches the name passed in.
     */
 
- 
+    public void remove(String name) {
+        for (int i = 0; i < items.size(); i++) {
+            if (name.equalsIgnoreCase(items.get(i).getName())) {
+                this.items.remove(i);
+            }
+        }
+    }
  
   
    /**

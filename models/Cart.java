@@ -4,12 +4,23 @@ import java.util.ArrayList;
 public class Cart {
     ArrayList<Item> items;
 
-
+    // constructor
     public Cart() {
         this.items = new ArrayList<Item>();
     }
 
-   /**
+    // getter
+    public Item getItem(int index) {
+        return new Item(this.items.get(index));
+    }
+
+    // setter
+    public void setItems(int index, Item item) {
+        this.items.set(index, new Item(item));
+    }
+
+
+    /**
     * Name: add
     * @param item
     * @return boolean
